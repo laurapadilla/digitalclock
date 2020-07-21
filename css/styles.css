@@ -1,0 +1,499 @@
+body {
+  background-color: white;
+}
+
+section {
+  position: relative;
+  height: 100vh;
+}
+
+.time {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+}
+
+.digit,
+.colon {
+  width: 10px;
+  height: 110px;
+  margin: 5px;
+  width: 60px;
+}
+
+.colon {
+  background: linear-gradient(-90deg, #ddd 10px, transparent 10px),
+    linear-gradient(-90deg, #ddd 10px, transparent 10px);
+
+  background-position: 0 40px, 0 65px;
+  background-repeat: no-repeat;
+  background-size: 10px 10px, 10px 10px;
+}
+
+.digit {
+  background-image: linear-gradient(
+      /* top */ 90deg,
+      transparent 10px,
+      #ddd 10px,
+      #ddd 50px,
+      transparent 50px
+    ),
+    /* Middle */
+      linear-gradient(
+        90deg,
+        transparent 10px,
+        #ddd 10px,
+        #ddd 50px,
+        transparent 50px
+      ),
+    /* Bottom*/
+      linear-gradient(
+        90deg,
+        transparent 10px,
+        #ddd 10px,
+        #ddd 50px,
+        transparent 50px
+      ),
+    /* TopLeft*/
+      linear-gradient(
+        90deg,
+        #ddd 10px,
+        transparent 10px,
+        transparent 50px,
+        #ddd 50px
+      ),
+    /* BottomLeft */
+      linear-gradient(
+        90deg,
+        #ddd 10px,
+        transparent 10px,
+        transparent 50px,
+        #ddd 50px
+      );
+  background-position: 0 0, 0 50px, 0 100px, 0 10px, 0 60px;
+  background-repeat: no-repeat;
+  background-size: 60px 10px, 60px 10px, 60px 10px, 60px 40px, 60px 40px;
+}
+
+.zero {
+  background-image: linear-gradient(
+      /* top */ 90deg,
+      transparent 10px,
+      black 10px,
+      black 50px,
+      transparent 50px
+    ),
+    /* Middle */
+      linear-gradient(
+        90deg,
+        transparent 10px,
+        #ddd 10px,
+        #ddd 50px,
+        transparent 50px
+      ),
+    /* Bottom*/
+      linear-gradient(
+        90deg,
+        transparent 10px,
+        black 10px,
+        black 50px,
+        transparent 50px
+      ),
+    /* Bottom*/
+      linear-gradient(
+        90deg,
+        black 10px,
+        transparent 10px,
+        transparent 50px,
+        black 50px
+      ),
+    /* Topleft */
+      linear-gradient(
+        90deg,
+        black 10px,
+        transparent 10px,
+        transparent 50px,
+        black 50px
+      ); /* Bottomleft */
+}
+
+.one {
+  background-image: linear-gradient(
+      /* Top */ 90deg,
+      transparent 10px,
+      #ddd 10px,
+      #ddd 50px,
+      transparent 50px
+    ),
+    /* Middle */
+      linear-gradient(
+        90deg,
+        transparent 10px,
+        #ddd 10px,
+        #ddd 50px,
+        transparent 50px
+      ),
+    /* Bottom*/
+      linear-gradient(
+        90deg,
+        transparent 10px,
+        #ddd 10px,
+        #ddd 50px,
+        transparent 50px
+      ),
+    /* Topleft*/
+      linear-gradient(
+        90deg,
+        #ddd 10px,
+        transparent 10px,
+        transparent 50px,
+        black 50px
+      ),
+    /* Bottom Left */
+      linear-gradient(
+        90deg,
+        #ddd 10px,
+        transparent 10px,
+        transparent 50px,
+        black 50px
+      );
+}
+
+.two {
+  background-image: linear-gradient(
+      90deg,
+      transparent 10px,
+      black 10px,
+      black 50px,
+      transparent 50px
+    ),
+    /*  Top  */
+      linear-gradient(
+        90deg,
+        transparent 10px,
+        black 10px,
+        black 50px,
+        transparent 50px
+      ),
+    /* Middle*/
+      linear-gradient(
+        90deg,
+        transparent 10px,
+        black 10px,
+        black 50px,
+        transparent 50px
+      ),
+    /* Bottom*/
+      linear-gradient(
+        90deg,
+        #ddd 10px,
+        transparent 10px,
+        transparent 50px,
+        black 50px
+      ),
+    /* Topleft */
+      linear-gradient(
+        90deg,
+        black 10px,
+        transparent 10px,
+        transparent 50px,
+        #ddd 50px
+      ); /* Bottomleft */
+}
+
+.three {
+  background-image: linear-gradient(
+      90deg,
+      transparent 10px,
+      black 10px,
+      black 50px,
+      transparent 50px
+    ),
+    /*  Top  */
+      linear-gradient(
+        90deg,
+        transparent 10px,
+        black 10px,
+        black 50px,
+        transparent 50px
+      ),
+    /* Middle*/
+      linear-gradient(
+        90deg,
+        transparent 10px,
+        black 10px,
+        black 50px,
+        transparent 50px
+      ),
+    /* Bottom*/
+      linear-gradient(
+        90deg,
+        #ddd 10px,
+        transparent 10px,
+        transparent 50px,
+        black 50px
+      ),
+    /* Topleft */
+      linear-gradient(
+        90deg,
+        #ddd 10px,
+        transparent 10px,
+        transparent 50px,
+        black 50px
+      ); /* Bottomleft */
+}
+
+.four {
+  background-image: linear-gradient(
+      90deg,
+      transparent 10px,
+      #ddd 10px,
+      #ddd 50px,
+      transparent 50px
+    ),
+    /*  Top  */
+      linear-gradient(
+        90deg,
+        transparent 10px,
+        black 10px,
+        black 50px,
+        transparent 50px
+      ),
+    /* Middle*/
+      linear-gradient(
+        90deg,
+        transparent 10px,
+        #ddd 10px,
+        #ddd 50px,
+        transparent 50px
+      ),
+    /* Bottom*/
+      linear-gradient(
+        90deg,
+        black 10px,
+        transparent 10px,
+        transparent 50px,
+        black 50px
+      ),
+    /* Topleft */
+      linear-gradient(
+        90deg,
+        #ddd 10px,
+        transparent 10px,
+        transparent 50px,
+        black 50px
+      ); /* Bottomleft */
+}
+
+.five {
+  background-image: linear-gradient(
+      90deg,
+      transparent 10px,
+      #000 10px,
+      #000 50px,
+      transparent 50px
+    ),
+    /*  Top  */
+      linear-gradient(
+        90deg,
+        transparent 10px,
+        #000 10px,
+        #000 50px,
+        transparent 50px
+      ),
+    /* Middle*/
+      linear-gradient(
+        90deg,
+        transparent 10px,
+        #000 10px,
+        #000 50px,
+        transparent 50px
+      ),
+    /* Bottom*/
+      linear-gradient(
+        90deg,
+        #000 10px,
+        transparent 10px,
+        transparent 50px,
+        #ddd 50px
+      ),
+    /* Topleft */
+      linear-gradient(
+        90deg,
+        #ddd 10px,
+        transparent 10px,
+        transparent 50px,
+        #000 50px
+      ); /* Bottomleft */
+}
+
+.six {
+  background-image: linear-gradient(
+      90deg,
+      transparent 10px,
+      #ddd 10px,
+      #ddd 50px,
+      transparent 50px
+    ),
+    /*  Top  */
+      linear-gradient(
+        90deg,
+        transparent 10px,
+        #000 10px,
+        #000 50px,
+        transparent 50px
+      ),
+    /* Middle*/
+      linear-gradient(
+        90deg,
+        transparent 10px,
+        #000 10px,
+        #000 50px,
+        transparent 50px
+      ),
+    /* Bottom*/
+      linear-gradient(
+        90deg,
+        #000 10px,
+        transparent 10px,
+        transparent 50px,
+        #ddd 50px
+      ),
+    /* Topleft */
+      linear-gradient(
+        90deg,
+        #000 10px,
+        transparent 10px,
+        transparent 50px,
+        #000 50px
+      ); /* Bottomleft */
+}
+
+.seven {
+  background-image: linear-gradient(
+      90deg,
+      transparent 10px,
+      #000 10px,
+      #000 50px,
+      transparent 50px
+    ),
+    /*  Top  */
+      linear-gradient(
+        90deg,
+        transparent 10px,
+        #ddd 10px,
+        #ddd 50px,
+        transparent 50px
+      ),
+    /* Middle*/
+      linear-gradient(
+        90deg,
+        transparent 10px,
+        #ddd 10px,
+        #ddd 50px,
+        transparent 50px
+      ),
+    /* Bottom*/
+      linear-gradient(
+        90deg,
+        #ddd 10px,
+        transparent 10px,
+        transparent 50px,
+        #000 50px
+      ),
+    /* Topleft */
+      linear-gradient(
+        90deg,
+        #ddd 10px,
+        transparent 10px,
+        transparent 50px,
+        #000 50px
+      ); /* Bottomleft */
+}
+
+.eight {
+  background-image: linear-gradient(
+      90deg,
+      transparent 10px,
+      #000 10px,
+      #000 50px,
+      transparent 50px
+    ),
+    /*  Top  */
+      linear-gradient(
+        90deg,
+        transparent 10px,
+        #000 10px,
+        #000 50px,
+        transparent 50px
+      ),
+    /* Middle*/
+      linear-gradient(
+        90deg,
+        transparent 10px,
+        #000 10px,
+        #000 50px,
+        transparent 50px
+      ),
+    /* Bottom*/
+      linear-gradient(
+        90deg,
+        #000 10px,
+        transparent 10px,
+        transparent 50px,
+        #000 50px
+      ),
+    /* Topleft */
+      linear-gradient(
+        90deg,
+        #000 10px,
+        transparent 10px,
+        transparent 50px,
+        #000 50px
+      ); /* Bottomleft */
+}
+
+.nine {
+  background-image: linear-gradient(
+      90deg,
+      transparent 10px,
+      #000 10px,
+      #000 50px,
+      transparent 50px
+    ),
+    /*  Top  */
+      linear-gradient(
+        90deg,
+        transparent 10px,
+        #000 10px,
+        #000 50px,
+        transparent 50px
+      ),
+    /* Middle*/
+      linear-gradient(
+        90deg,
+        transparent 10px,
+        #000 10px,
+        #000 50px,
+        transparent 50px
+      ),
+    /* Bottom*/
+      linear-gradient(
+        90deg,
+        #000 10px,
+        transparent 10px,
+        transparent 50px,
+        #000 50px
+      ),
+    /* Topleft */
+      linear-gradient(
+        90deg,
+        #ddd 10px,
+        transparent 10px,
+        transparent 50px,
+        #000 50px
+      ); /* Bottomleft */
+}
